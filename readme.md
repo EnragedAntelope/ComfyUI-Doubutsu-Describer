@@ -16,6 +16,7 @@ pip install -r requirements.txt
 You can download these files manually from the Hugging Face website or use the Hugging Face CLI:
 huggingface-cli download qresearch/doubutsu-2b-pt-756 --local-dir models/qresearch/doubutsu-2b-pt-756
 huggingface-cli download qresearch/doubutsu-2b-lora-756-docci --local-dir models/qresearch/doubutsu-2b-lora-756-docci
+
 4. Restart ComfyUI
 
 ## Usage
