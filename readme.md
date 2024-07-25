@@ -1,8 +1,8 @@
-![image](https://github.com/user-attachments/assets/8407e3c3-ac30-4926-ab24-90e57ac1476a)
 # Doubutsu Image Describer for ComfyUI
 
 This custom node for ComfyUI allows you to use the Doubutsu small VLM model to describe images.
 Credit and further information on Doubutsu: https://huggingface.co/qresearch/doubutsu-2b-pt-756
+![image](https://github.com/user-attachments/assets/8407e3c3-ac30-4926-ab24-90e57ac1476a)
 
 ## Installation
 
