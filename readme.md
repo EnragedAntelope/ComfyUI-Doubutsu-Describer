@@ -3,7 +3,8 @@
 This custom node for ComfyUI allows you to use the Doubutsu small VLM model to describe images.
 Credit and further information on Doubutsu: https://huggingface.co/qresearch/doubutsu-2b-pt-756
 
-![image](https://github.com/user-attachments/assets/8407e3c3-ac30-4926-ab24-90e57ac1476a)
+![image](https://github.com/user-attachments/assets/766be6c5-b1f0-4a2e-b98f-8fda661051b9)
+
 
 ## Installation
 
@@ -34,6 +35,7 @@ After installation, you'll find a new node called "Doubutsu Image Describer" in 
 - `question`: The question to ask about the image (default: "Describe the image")
 - `max_new_tokens`: Maximum number of tokens to generate (default: 128)
 - `temperature`: Controls randomness in generation (default: 0.1)
+- `precision`: Choose between float16 or bfloat16 for inference. If your GPU supports it, bfloat16 should be quicker.
 
 ## License
 
