@@ -9,15 +9,16 @@ Credit and further information on Doubutsu: https://huggingface.co/qresearch/dou
 ## Installation
 
 1. Clone this repository into your ComfyUI's `custom_nodes` directory:
-git clone https://github.com/yourusername/comfyui-doubutsu-describer.git
+git clone https://github.com/EnragedAntelope/comfyui-doubutsu-describer.git
 2. Install the required dependencies:
 pip install -r requirements.txt
 3. Download the model files:
-- Create a `models` directory in the root of this repository.
+- Create a `models` directory in the root of this repository (ComfyUI\custom_nodes\ComfyUI-Doubutsu-Describer).
 - Download the model files for "qresearch/doubutsu-2b-pt-756" from Hugging Face and place them in `models/qresearch/doubutsu-2b-pt-756/`.
 - Download the adapter files for "qresearch/doubutsu-2b-lora-756-docci" and place them in `models/qresearch/doubutsu-2b-lora-756-docci/`.
 
 You can download these files manually from the Hugging Face website or use the Hugging Face CLI:
+Open a command prompt, navigate to your ComfyUI\custom_nodes\ComfyUI-Doubutsu-Describer directory, then execute:
 
 huggingface-cli download qresearch/doubutsu-2b-pt-756 --local-dir models/qresearch/doubutsu-2b-pt-756
 
