@@ -2,6 +2,7 @@
 
 This custom node for ComfyUI allows you to use the Doubutsu small VLM model to describe images.
 Credit and further information on Doubutsu: https://huggingface.co/qresearch/doubutsu-2b-pt-756
+
 ![image](https://github.com/user-attachments/assets/8407e3c3-ac30-4926-ab24-90e57ac1476a)
 
 ## Installation
@@ -13,6 +14,7 @@ pip install -r requirements.txt
 3. Download the model files:
 - Create a `models` directory in the root of this repository.
 - Download the model files for "qresearch/doubutsu-2b-pt-756" from Hugging Face and place them in `models/qresearch/doubutsu-2b-pt-756/`.
+
 - Download the adapter files for "qresearch/doubutsu-2b-lora-756-docci" and place them in `models/qresearch/doubutsu-2b-lora-756-docci/`.
 
 You can download these files manually from the Hugging Face website or use the Hugging Face CLI:
