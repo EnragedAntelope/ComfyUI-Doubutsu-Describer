@@ -14,11 +14,11 @@ pip install -r requirements.txt
 3. Download the model files:
 - Create a `models` directory in the root of this repository.
 - Download the model files for "qresearch/doubutsu-2b-pt-756" from Hugging Face and place them in `models/qresearch/doubutsu-2b-pt-756/`.
-
 - Download the adapter files for "qresearch/doubutsu-2b-lora-756-docci" and place them in `models/qresearch/doubutsu-2b-lora-756-docci/`.
 
 You can download these files manually from the Hugging Face website or use the Hugging Face CLI:
 huggingface-cli download qresearch/doubutsu-2b-pt-756 --local-dir models/qresearch/doubutsu-2b-pt-756
+
 huggingface-cli download qresearch/doubutsu-2b-lora-756-docci --local-dir models/qresearch/doubutsu-2b-lora-756-docci
 
 4. Restart ComfyUI
