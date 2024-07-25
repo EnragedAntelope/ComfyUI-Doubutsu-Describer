@@ -18,6 +18,7 @@ class DoubutsuDescriber:
                 "question": ("STRING", {"default": "Describe the image"}),
                 "max_new_tokens": ("INT", {"default": 128, "min": 1, "max": 512}),
                 "temperature": ("FLOAT", {"default": 0.1, "min": 0.0, "max": 1.0, "step": 0.01}),
+                "precision": (["float16", "bfloat16"], {"default": "float16"}),
             }
         }
 
@@ -25,16 +26,17 @@ class DoubutsuDescriber:
     FUNCTION = "describe_image"
     CATEGORY = "image/text"
 
-    def describe_image(self, image, question, max_new_tokens, temperature):
+    def describe_image(self, image, question, max_new_tokens, temperature, precision):
         if self.model is None:
             model_path = os.path.join(os.path.dirname(__file__), "..", "models", self.model_id)
             if not os.path.exists(model_path):
                 raise FileNotFoundError(f"Model files not found. Please download the model to {model_path}")
             
+            dtype = torch.bfloat16 if precision == "bfloat16" else torch.float16
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_path,
                 trust_remote_code=True,
-                torch_dtype=torch.float16,
+                torch_dtype=dtype,
             ).to("cuda")
             self.tokenizer = AutoTokenizer.from_pretrained(
                 model_path,
@@ -63,8 +65,9 @@ class DoubutsuDescriber:
         
         pil_image = Image.fromarray(image_np)
         
-        result = self.model.answer_question(
-            pil_image, question, self.tokenizer, max_new_tokens=max_new_tokens, temperature=temperature
-        )
+        with torch.cuda.amp.autocast(dtype=torch.bfloat16 if precision == "bfloat16" else torch.float16):
+            result = self.model.answer_question(
+                pil_image, question, self.tokenizer, max_new_tokens=max_new_tokens, temperature=temperature
+            )
         
         return (result,)
