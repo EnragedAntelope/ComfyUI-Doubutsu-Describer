@@ -10,6 +10,6 @@ Repository = "https://github.com/EnragedAntelope/ComfyUI-Doubutsu-Describer"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "enragedantelope"
 DisplayName = "ComfyUI-Doubutsu-Describer"
 Icon = ""
