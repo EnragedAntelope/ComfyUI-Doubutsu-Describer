@@ -1,5 +1,9 @@
 # Doubutsu Image Describer for ComfyUI
 
+> **⚠️ DEPRECATED - NO LONGER MAINTAINED**
+>
+> This project is no longer actively maintained. Many better vision tools are now available and supported in ComfyUI. Please consider using alternative vision models and nodes that are actively maintained.
+
 This custom node for ComfyUI allows you to use the Doubutsu small VLM model to describe images.
 Credit and further information on Doubutsu: https://huggingface.co/qresearch/doubutsu-2b-pt-756
 
