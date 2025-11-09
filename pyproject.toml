@@ -1,9 +1,10 @@
 [project]
 name = "comfyui-doubutsu-describer"
 description = "This custom node for ComfyUI allows you to use the Doubutsu small VLM model to describe images. Credit and further information on Doubutsu: [a/https://huggingface.co/qresearch/doubutsu-2b-pt-756](https://huggingface.co/qresearch/doubutsu-2b-pt-756)"
-version = "1.0.0"
+version = "1.0.1"
 license = {file = ""}
 dependencies = ["torch", "transformers", "Pillow", "bitsandbytes", "peft"]
+classifiers = ["Development Status :: 7 - Inactive"]
 
 [project.urls]
 Repository = "https://github.com/EnragedAntelope/ComfyUI-Doubutsu-Describer"
